@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Student> students = new ArrayList<>();
-        
+        Teacher teacher = new Teacher("Sponge Bob", 44, "Under the Sea");
+
         students.add(new Student("Alice Johnson", 19, 89.5, "New York"));
         students.add(new Student("Bob Smith", 20, 92.3, "Los Angeles"));
         students.add(new Student("Charlie Davis", 18, 85.7, "Chicago"));
@@ -27,5 +28,8 @@ public class Main {
         students.add(new Student("Rachel Hall", 22, 89.8, "Seattle"));
         students.add(new Student("Sam Allen", 21, 90.3, "Denver"));
         students.add(new Student("Tina Young", 20, 88.0, "Washington"));
+
+        ClassRoom classRoom = new ClassRoom(students, teacher);
+        System.out.println(classRoom.toString());
     }
 }
