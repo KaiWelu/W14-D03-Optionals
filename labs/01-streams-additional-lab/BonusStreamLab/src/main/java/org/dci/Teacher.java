@@ -34,4 +34,8 @@ public class Teacher {
     public void setCity(String city) {
         this.city = city;
     }
+    @Override
+    public String toString() {
+        return "Name: " + getName() + " Age: " + getAge() + " City: " + getCity();
+    }
 }

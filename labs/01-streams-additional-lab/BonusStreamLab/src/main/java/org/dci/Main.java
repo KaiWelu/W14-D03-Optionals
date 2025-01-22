@@ -1,6 +1,7 @@
 package org.dci;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +32,19 @@ public class Main {
 
         ClassRoom classRoom = new ClassRoom(students, teacher);
         System.out.println(classRoom.toString());
+
+        List<Student> belowAge = classRoom.findStudentsBelowAge(20);
+
+        System.out.println("\nStudents below age 20:");
+        for(Student student : belowAge) {
+            System.out.println(student.toString());
+        }
+
+        System.out.println("\nStudents with grade higher than 90:");
+        List<Student> highGrade = classRoom.getHighAchievers(90.20);
+        for(Student student : highGrade) {
+            System.out.println(student.toString());
+        }
+
     }
 }
